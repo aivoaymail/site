@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aivoay.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="bilder/aivoay_logo.jpg" alt="aivoay Logo" class="logo-img">
+                <span class="logo-text">Aiv<span class="logo-text1">o</span><span class="logo-text2">a</span><span class="logo-text3">y</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#dienstleistungen" class="nav-link">Dienstleistungen</a></li>
+                <li><a href="#ueber-uns" class="nav-link">Über uns</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                <li><a href="#impressum" class="nav-link">Impressum</a></li>
+            </ul>
+            <a href="#kontakt" class="nav-cta">Beratung starten</a>
+            <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="bilder/geralt-ai-generated-8733987_1920.jpg" alt="KI Hintergrund" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">KI-Automatisierung für Unternehmen</div>
+            <h1 class="hero-title">Menschen und KI<br><span class="gradient-text">intelligent verbunden</span></h1>
+            <p class="hero-subtitle">Wir automatisieren Ihre Geschäftsprozesse mit modernster Künstlicher Intelligenz – maßgeschneidert für kleine und mittelständische Unternehmen.</p>
+            <div class="hero-actions">
+                <a href="#dienstleistungen" class="btn btn-outline">Unsere Lösungen</a>
+                <a href="#kontakt" class="btn btn-primary">Kostenlos beraten lassen</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number"></span><span class="stat-suffix"></span>
+                    <span class="stat-label"></span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number"></span><span class="stat-suffix"></span>
+                    <span class="stat-label"></span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" ></span><span class="stat-suffix"></span>
+                    <span class="stat-label"></span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="trusted-text">Vertraut von zukunftsorientierten Unternehmen</p>
+            <div class="trusted-logos">
+                <div class="trusted-item">Klein & Mittelunternehmen</div>
+                <div class="trusted-item">Industrie & Handel</div>
+                <div class="trusted-item">Handwerk</div>
+                <div class="trusted-item">Logistik</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dienstleistungen -->
+    <section class="services" id="dienstleistungen">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Unsere Leistungen</span>
+                <h2 class="section-title">Angebotene Dienstleistungen</h2>
+                <p class="section-desc">Wir bieten ganzheitliche KI-Lösungen, die Ihre Geschäftsprozesse transformieren und Ihr Unternehmen auf die nächste Stufe heben.</p>
+            </div>
+            <div class="services-grid">
+			
+			<!-- Service 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h3 class="service-title">KI-Beratung</h3>
+                    <p class="service-desc">Unsere Experten beraten Sie umfassend zu den Möglichkeiten der Künstlichen Intelligenz und entwickeln eine maßgeschneiderte Strategie für Ihren Erfolg.</p>
+                    <ul class="service-features">
+                        <li>Potenzialanalyse & Machbarkeitsstudie</li>
+                        <li>KI-Readiness-Assessment</li>
+                        <li>Strategieentwicklung</li>
+                        <li>Technologieauswahl</li>
+                    </ul>
+                    <a href="#kontakt" class="service-link">Mehr erfahren →</a>
+                </div>
+				
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <h3 class="service-title">Automatisierung der Geschäftsprozesse</h3>
+                    <p class="service-desc">Wir analysieren und automatisieren Ihre wiederkehrenden Arbeitsabläufe mit intelligenten KI-Systemen – von der Datenverarbeitung bis zum Kundenservice.</p>
+                    <ul class="service-features">
+                        <li>Workflow-Automatisierung</li>
+                        <li>Intelligente Dokumentenverarbeitung</li>
+                        <li>Chatbots</li>
+                        <li>Prozessoptimierung</li>
+                    </ul>
+                    <a href="#kontakt" class="service-link">Mehr erfahren →</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8l3 3-3 3"/><line x1="13" y1="14" x2="17" y2="14"/></svg>
+                    </div>
+                    <h3 class="service-title">Implementierung von KI-Lösungen</h3>
+                    <p class="service-desc">Von der Konzeption bis zum Go-Live: Wir implementieren passgenaue KI-Lösungen, die sich nahtlos in Ihre bestehende IT-Infrastruktur integrieren.</p>
+                    <ul class="service-features">
+                        <li>Individuelle Entwicklung</li>
+                        <li>Systemintegration</li>
+                        <li>Schulung & Support</li>
+                        <li>Kontinuierliche Optimierung</li>
+                    </ul>
+                    <a href="#kontakt" class="service-link">Mehr erfahren →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Unser Prozess</span>
+                <h2 class="section-title">So arbeiten wir</h2>
+                <p class="section-desc">In vier klaren Schritten zu Ihrer individuellen KI-Lösung.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <h3>Analyse</h3>
+                    <p>Wir analysieren Ihre Prozesse und identifizieren Automatisierungspotenziale.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <h3>Strategie</h3>
+                    <p>Gemeinsam entwickeln wir eine maßgeschneiderte KI-Strategie.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <h3>Umsetzung</h3>
+                    <p>Unsere Experten implementieren die Lösung in Ihre Systeme.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <h3>Optimierung</h3>
+                    <p>Kontinuierliche Verbesserung und Support für nachhaltigen Erfolg.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Visual Section -->
+    <section class="features-visual">
+        <div class="container">
+            <div class="features-split">
+                <div class="features-image">
+                    <img src="bilder/pexels-photo-5520322.jpeg" alt="Kontaktpartner">
+                </div>
+                <div class="features-content">
+                    <span class="section-tag">Warum Aivoay?</span>
+                    <h2 class="section-title left-align">Ihr Partner für die digitale Zukunft</h2>
+                    <div class="feature-item">
+                        <div class="feature-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <h4>Spezialisiert auf KMU</h4>
+                            <p>Lösungen, die auf die Bedürfnisse kleiner und mittelständischer Unternehmen zugeschnitten sind.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <h4>Modernste Technologie</h4>
+                            <p>Wir setzen auf die neuesten KI-Technologien wie Machine Learning, NLP und Computer Vision.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <h4>Messbare Ergebnisse</h4>
+                            <p>Transparente KPIs und nachweisbare Verbesserungen ab dem ersten Monat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns -->
+    <section class="about" id="ueber-uns">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Über uns</span>
+                <h2 class="section-title">Wir sind Aivoay</h2>
+                <p class="section-desc">Ein Team aus erfahrenen Spezialisten und Beratern mit einer gemeinsamen Vision.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="bilder/image18.jpg" alt="aivoay Team">
+                </div>
+                <div class="about-text">
+                    <h3>Unsere Mission</h3>
+                    <p>Bei aivoay verbinden wir Menschen und Künstliche Intelligenz zu einer kraftvollen Einheit. Wir glauben daran, dass KI keine Bedrohung ist, sondern ein Werkzeug, das Unternehmen stärker, effizienter und zukunftssicherer macht.</p>
+                    <p>Unser Fokus liegt auf kleinen und mittelständischen Unternehmen, die den Schritt in die digitale Zukunft wagen möchten. Mit maßgeschneiderten Lösungen und persönlicher Beratung machen wir KI zugänglich und nutzbar - ohne Komplexität, mit maximalem Mehrwert.</p>
+                     <div class="about-values">
+                        <div class="value">
+                            <span class="value-icon"></span>
+                            <span>Fokussiert</span>
+                        </div>
+                        <div class="value">
+                            <span class="value-icon"></span>
+                            <span>Partnerschaftlich</span>
+                        </div>
+                        <div class="value">
+                            <span class="value-icon"></span>
+                            <span>Innovativ</span>
+                        </div>
+                        <div class="value">
+                            <span class="value-icon"></span>
+                            <span>Zuverlässig</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>Bereit für die Zukunft?</h2>
+                    <p>Lassen Sie uns gemeinsam herausfinden, wie KI Ihr Unternehmen voranbringen kann. Vereinbaren Sie jetzt ein kostenloses Erstgespräch.</p>
+                    <a href="#kontakt" class="btn btn-white">Jetzt Kontakt aufnehmen</a>
+                </div>
+                <div class="cta-image">
+                    <img src="bilder/satheeshsankaran-ai-generated-8686233_1920.jpg" alt="KI Zukunft">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Kontakt</span>
+                <h2 class="section-title">Sprechen Sie mit uns</h2>
+                <p class="section-desc">Wir freuen uns auf Ihre Anfrage und melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Musterstraße 1<br>71640 Ludwigsburg, Deutschland</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>E-Mail</h4>
+                            <p>info@aivoay.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+49 (0) 1522 207 5867</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Unternehmen</label>
+                            <input type="text" id="company" name="company" placeholder="Ihr Unternehmen">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="ihre@email.de">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+49 ...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Gewünschte Dienstleistung</label>
+                        <select id="service" name="service">
+                            <option value="">Bitte wählen...</option>
+                            <option value="automatisierung">Beratung</option>
+                            <option value="beratung">Potenzialanalyse</option>
+                            <option value="sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nachricht *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Beschreiben Sie Ihr Anliegen..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Nachricht senden</button>
+                    <div class="form-success" id="formSuccess">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impressum -->
+    <!-- <section class="impressum" id="impressum">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Rechtliches</span>
+                <h2 class="section-title">Impressum</h2>
+            </div>
+            <div class="impressum-content">
+                <div class="impressum-block">
+                    <h4>Angaben gemäß § 5 TMG</h4>
+                    <p>
+                        aivoay e.K.<br>
+                        Musterstraße 1<br>
+                        71640 Ludwigsburg<br>
+                        Deutschland
+                    </p>
+                </div>
+                <div class="impressum-block">
+                    <h4>Vertreten durch</h4>
+                    <p>Geschäftsführer: </p>
+                </div>
+                <div class="impressum-block">
+                    <h4>Kontakt</h4>
+                    <p>
+                        Telefon: +49 (0) 1522 207 5867<br>
+                        E-Mail: info@aivoay.com
+                    </p>
+                </div>
+                <div class="impressum-block">
+                    <h4>Registereintrag</h4>
+                    <p>
+                        Eintragung im Handelsregister.<br>
+                        Registergericht: Amtsgericht Ludwigsburg<br>
+                        Registernummer: HRB XXXXX
+                    </p>
+                </div>
+                <div class="impressum-block">
+                    <h4>Umsatzsteuer-ID</h4>
+                    <p>
+                        Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:<br>
+                        DE XXXXXXXXX
+                    </p>
+                </div>
+                <div class="impressum-block">
+                    <h4>Haftungsausschluss</h4>
+                    <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+                </div>
+            </div>
+        </div>
+    </section> --!>
+	
+	 <!-- Impressum -->
+    <section class="impressum" id="impressum">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Rechtliches</span>
+                <h2 class="section-title">Impressum</h2>
+            </div>
+            <div class="impressum-grid">
+                <div>
+                    <h3>Angaben gemäß § 5 TMG</h3>
+                    <p>aivoay e.K.<br>Musterstraße 1<br>71640 Ludwigsburg<br>Deutschland</p>
+                </div>
+                <div>
+				<br>
+                    <h3>Vertreten durch</h3>
+                    <p>Geschäftsführer: </p>
+					<br>
+                    <h3>Kontakt</h3>
+                    <p>Telefon: +49 (0) 1522 207 5867<br>E-Mail: info@aivoay.com</p>
+                </div>
+				<br>
+                <div>
+                    <h3>Registereintrag</h3>
+                    <p>Eintragung im Handelsregister<br>Registergericht: Amtsgericht Ludwigsburg<br>Registernummer: </p>
+                </div>
+				<br>
+                <div>
+                    <h3>Umsatzsteuer-ID</h3>
+                    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:<br>DE 123 456 789</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <img src="bilder/aivoay_logo.jpg" alt="aivoay Logo" class="logo-img">
+                        <span class="logo-text">aivoay</span>
+                    </a>
+                    <p>Menschen und KI intelligent verbunden. Ihr Partner für KI-Automatisierung und digitale Transformation.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+                        <li><a href="#ueber-uns">Über uns</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Dienstleistungen</h4>
+                    <ul>
+                        <li><a href="#dienstleistungen">Prozessautomatisierung</a></li>
+                        <li><a href="#dienstleistungen">KI-Beratung</a></li>
+                        <li><a href="#dienstleistungen">KI-Implementierung</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#impressum">Impressum</a></li>
+                        <li><a href="#impressum">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 aivoay e.K. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
