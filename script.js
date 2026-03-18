@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===== Contact Form =====
-    const contactForm = document.getElementById('contactForm');
+    /* const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
 
     if (contactForm) {
@@ -161,7 +161,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 formSuccess.classList.remove('show');
             }, 5000);
         });
+    } */
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                formSuccess.classList.add('show');
+                contactForm.reset();
+
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                }, 5000);
+            } else {
+                alert("Fehler beim Senden");
+                console.log(result);
+            }
+        });
     }
+    
 
     // ===== Smooth scroll for anchor links =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
