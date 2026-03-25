@@ -226,7 +226,7 @@ ul {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.7) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba rgba(255,255,255,0.85) 50%, rgba rgba(255,255,255,0.7) 100%);
 }
 
 .hero-content {
@@ -273,7 +273,6 @@ ul {
     max-width: 600px;
 }
 
-/* Neue Klasse für Text unter Buttons */
 .hero-subtext {
     font-size: 0.9rem;
     color: var(--dark-500);
@@ -339,7 +338,7 @@ ul {
     width: 100%;
 }
 
-/* Neue Trust Bar unter dem Hero */
+/* Trust Bar unter dem Hero */
 .trust-bar {
     background: var(--dark-50);
     border-top: 1px solid var(--dark-200);
@@ -433,7 +432,7 @@ ul {
     line-height: 1.7;
 }
 
-/* ===== Moderne Dienstleistungskarten ===== */
+/* ===== Dienstleistungskarten ===== */
 .services-modern {
     padding: 80px 0;
     background: var(--white);
@@ -701,36 +700,40 @@ ul {
     line-height: 1.6;
 }
 
-/* ===== FAQ Section ===== */
+/* ===== FAQ Section VOLLSTÄNDIG ÜBERARBEITET ===== */
 .faq-section {
     padding: 100px 0;
     background: var(--dark-100);
 }
 
 .accordion {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 details {
     background: var(--white);
-    margin-bottom: 16px;
-    border-radius: var(--radius-md);
     border: 1px solid var(--dark-200);
+    border-radius: var(--radius-md);
     overflow: hidden;
 }
 
 summary {
-    padding: 24px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.05rem;
     list-style: none;
+    cursor: pointer;
+    padding: 22px 26px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--dark);
     position: relative;
-    padding-right: 40px;
+    padding-right: 64px;
+    transition: var(--transition);
 }
 
-summary::-webkit-details-marker {
+summary::-webkit-details-marker{
     display: none;
 }
 
@@ -738,19 +741,26 @@ summary::after {
     content: '+';
     position: absolute;
     right: 24px;
-    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
     color: var(--primary);
+    font-weight: 900;
 }
 
-details[open] summary::after {
+details[open] summary::after{
     content: '-';
 }
 
+summary:hover {
+    background: var(--primary-50);
+}
+
 details p {
-    padding: 0 24px 24px;
+    padding: 0 26px 24px;
     margin: 0;
     color: var(--dark-600);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* ===== Final CTA ===== */
@@ -803,9 +813,17 @@ details p {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Eher einspaltig für besseren Fokus */
+    grid-template-columns: 1fr;
     max-width: 700px;
     margin: 0 auto;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--dark-200);
+    box-shadow: var(--shadow-sm);
 }
 
 .form-row {
@@ -903,10 +921,6 @@ details p {
     font-size: 1rem;
 }
 
-.impressum-grid p {
-    white-space: pre-line;
-}
-
 .footer {
     padding: 64px 0 0;
     background: var(--dark);
@@ -992,6 +1006,13 @@ details p {
     transform: translateY(0);
 }
 
+.back-to-top:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -1058,14 +1079,6 @@ details p {
 
     .nav-cta {
         display: none;
-    }
-
-    .hero-content {
-        padding: 100px 24px 60px;
-    }
-
-    .trust-bar-content p {
-        font-size: 0.85rem;
     }
 
     .services-grid-modern {
