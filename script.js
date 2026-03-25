@@ -7,14 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
-        // Navbar
         if (scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
 
-        // Back to top button
         if (scrollY > 500) {
             backToTop.classList.add('visible');
         } else {
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
-    // Close menu on link click
     navLinks.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -85,9 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Apply fade-in to key elements
     const fadeElements = document.querySelectorAll(
-        '.service-card-modern, .process-step, .feature-item, .about-content, .contact-card, .impressum-block, .cta-card, .intro-text, .intro-visual, .focus-content, .focus-image'
+        '.service-card-modern, .feature-item, .intro-text, .intro-visual, .focus-content, .focus-image, .value-item, .case-item'
     );
 
     fadeElements.forEach(el => {
@@ -95,42 +91,48 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeObserver.observe(el);
     });
 
-    // ===== Contact Form Submit (Web3Forms) =====
+    // ===== Contact Form Web3Forms 100% GEFIXT =====
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
-            // Default prevent wird jetzt genutzt, um den Browser-Refresh zu stoppen
-            // e.preventDefault(); 
-            // Aber da wir async fetch nutzen, muss e.preventDefault() gesetzt sein, um die Standardsubmission zu verhindern
-            
-            // Hinweis: Web3Forms erwartet POST per FormData
-            e.preventDefault(); 
-
+            e.preventDefault();
             const formData = new FormData(contactForm);
 
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData,
+                    mode: "cors"
+                });
 
-            const result = await response.json();
+                let result;
+                try {
+                    result = await response.json();
+                } catch {
+                    result = { success: response.ok };
+                }
 
-            if (result.success) {
-                formSuccess.classList.add('show');
-                contactForm.reset();
+                if (result.success) {
+                    formSuccess.classList.add('show');
+                    contactForm.reset();
 
-                setTimeout(() => {
-                    formSuccess.classList.remove('show');
-                }, 5000);
-            } else {
-                alert("Fehler beim Senden");
-                console.log(result);
+                    setTimeout(() => {
+                        formSuccess.classList.remove('show');
+                    }, 6000);
+
+                } else {
+                    alert("Es gab einen kleinen Fehler beim Senden. Bitte schreibe uns stattdessen einfach an info@aivoay.com. Vielen Dank!");
+                    console.log("Fehler Details:", result);
+                }
+
+            } catch (err) {
+                console.error(err);
+                alert("Es gab einen kleinen Fehler beim Senden. Bitte schreibe uns stattdessen einfach an info@aivoay.com. Vielen Dank!");
             }
         });
     }
-    
 
     // ===== Smooth scroll for anchor links =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -141,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
-                const offset = 72; // navbar height
+                const offset = 72;
                 const pos = target.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top: pos, behavior: 'smooth' });
             }
