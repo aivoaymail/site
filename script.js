@@ -1,212 +1,119 @@
-(function () {
-    'use strict';
+// ===== Hamburger Menu =====
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+const body = document.body;
 
-    // Cache DOM elements
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    const backToTop = document.getElementById('backToTop');
-    const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-    const navLinkElements = document.querySelectorAll('.nav-link');
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const sections = document.querySelectorAll('section[id]');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    body.classList.toggle('menu-open');
+});
 
-    // ===== Navbar scroll effect =====
-    let lastScrollY = 0;
-    let ticking = false;
+// Close menu when a nav link is clicked
+navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        body.classList.remove('menu-open');
+    });
+});
 
-    function updateNavbar() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        if (window.scrollY > 500) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-
-        ticking = false;
+// Close menu on resize to desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        body.classList.remove('menu-open');
     }
+});
 
-    window.addEventListener('scroll', function () {
-        lastScrollY = window.scrollY;
-        if (!ticking) {
-            requestAnimationFrame(updateNavbar);
-            ticking = true;
-        }
-    }, { passive: true });
+// ===== Navbar Scroll Effect =====
+const navbar = document.getElementById('navbar');
 
-    // ===== Mobile hamburger menu =====
-    hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-    });
-
-    // Close mobile menu on link click
-    navLinkElements.forEach(function (link) {
-        link.addEventListener('click', function () {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // ===== Active nav link on scroll =====
-    function updateActiveNavLink() {
-        var scrollPos = window.scrollY + 120;
-
-        sections.forEach(function (section) {
-            var top = section.offsetTop;
-            var height = section.offsetHeight;
-            var id = section.getAttribute('id');
-
-            if (scrollPos >= top && scrollPos < top + height) {
-                navLinkElements.forEach(function (link) {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + id) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-
-    window.addEventListener('scroll', function () {
-        if (!ticking) {
-            requestAnimationFrame(function () {
-                updateActiveNavLink();
-            });
-        }
-    }, { passive: true });
-
-    // ===== Smooth scrolling for anchor links =====
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener('click', function (e) {
-            var targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            var target = document.querySelector(targetId);
-            if (target) {
-                e.preventDefault();
-                var offset = navbar.offsetHeight;
-                var targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // ===== Back to top =====
-    backToTop.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // ===== FAQ Accordion =====
-    faqQuestions.forEach(function (question) {
-        question.addEventListener('click', function () {
-            var faqItem = this.parentElement;
-            var isActive = faqItem.classList.contains('active');
-            var expanded = this.getAttribute('aria-expanded') === 'true';
-
-            // Close all other items
-            document.querySelectorAll('.faq-item.active').forEach(function (item) {
-                item.classList.remove('active');
-                item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-            });
-
-            // Toggle clicked item
-            if (!isActive) {
-                faqItem.classList.add('active');
-                this.setAttribute('aria-expanded', 'true');
-            }
-        });
-    });
-
-    // ===== Intersection Observer for fade-in animations =====
-    if ('IntersectionObserver' in window) {
-        var observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -60px 0px',
-            threshold: 0.1
-        };
-
-        var fadeObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    fadeObserver.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        fadeElements.forEach(function (el) {
-            fadeObserver.observe(el);
-        });
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        // Fallback: show all elements immediately
-        fadeElements.forEach(function (el) {
-            el.classList.add('visible');
-        });
+        navbar.classList.remove('scrolled');
     }
+});
 
-    // ===== Contact form handling (Web3Forms) =====
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+// ===== Active Nav Link on Scroll =====
+const sections = document.querySelectorAll('section[id]');
+const navLinksList = document.querySelectorAll('.nav-link');
 
-            var submitBtn = contactForm.querySelector('button[type="submit"]');
-            var originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Wird gesendet...';
-            submitBtn.disabled = true;
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
 
-            var formData = new FormData(contactForm);
+    navLinksList.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
 
-            fetch(contactForm.action, {
+// ===== Back to Top =====
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== Fade In Animation =====
+const fadeElements = document.querySelectorAll('.service-card, .process-step, .feature-item, .contact-card, .about-content, .cta-card');
+
+fadeElements.forEach(el => el.classList.add('fade-in'));
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+fadeElements.forEach(el => observer.observe(el));
+
+// ===== Contact Form =====
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        
+        try {
+            const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(function (response) {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw new Error('Netzwerkfehler');
-            })
-            .then(function (data) {
-                if (data.success) {
-                    formSuccess.classList.add('show');
-                    contactForm.reset();
-                    submitBtn.textContent = 'Gesendet ✓';
-
-                    setTimeout(function () {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    }, 4000);
-                } else {
-                    throw new Error('Senden fehlgeschlagen');
-                }
-            })
-            .catch(function () {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                alert('Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@aivoay.com.');
             });
-        });
-    }
-
-    // ===== Initial state =====
-    updateNavbar();
-    updateActiveNavLink();
-
-})();
+            
+            if (response.ok) {
+                formSuccess.classList.add('show');
+                contactForm.reset();
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                }, 5000);
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+        }
+    });
+}
