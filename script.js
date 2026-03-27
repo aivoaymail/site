@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
+        // Navbar
         if (scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
 
+        // Back to top button
         if (scrollY > 500) {
             backToTop.classList.add('visible');
         } else {
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
+    // Close menu on link click
     navLinks.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -67,6 +70,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateActiveNav);
 
+    // ===== Counter Animation =====
+    const counters = document.querySelectorAll('.stat-number[data-count]');
+    let countersAnimated = false;
+
+    function animateCounters() {
+        if (countersAnimated) return;
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (!heroStats) return;
+
+        const rect = heroStats.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            countersAnimated = true;
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'), 10);
+                const duration = 2000;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    // Ease out cubic
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = Math.floor(eased * target);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target;
+                    }
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+    }
+
+    window.addEventListener('scroll', animateCounters);
+    animateCounters(); // Check on load
+
     // ===== Fade-in on Scroll =====
     const observerOptions = {
         threshold: 0.1,
@@ -82,8 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
+    // Apply fade-in to key elements
     const fadeElements = document.querySelectorAll(
-        '.service-card-modern, .feature-item, .intro-text, .intro-visual, .focus-content, .focus-image, .value-item, .case-item'
+        '.service-card, .process-step, .feature-item, .about-content, .contact-card, .impressum-block, .cta-card'
     );
 
     fadeElements.forEach(el => {
@@ -91,48 +137,61 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeObserver.observe(el);
     });
 
-    // ===== Contact Form Web3Forms 100% GEFIXT =====
+    // ===== Contact Form =====
+    /* const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Validate
+            const name = contactForm.querySelector('#name').value.trim();
+            const email = contactForm.querySelector('#email').value.trim();
+            const message = contactForm.querySelector('#message').value.trim();
+
+            if (!name || !email || !message) return;
+
+            // Show success message
+            formSuccess.classList.add('show');
+            contactForm.reset();
+
+            // Hide after 5 seconds
+            setTimeout(() => {
+                formSuccess.classList.remove('show');
+            }, 5000);
+        });
+    } */
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
+            contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
             const formData = new FormData(contactForm);
 
-            try {
-                const response = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    body: formData,
-                    mode: "cors"
-                });
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-                let result;
-                try {
-                    result = await response.json();
-                } catch {
-                    result = { success: response.ok };
-                }
+            const result = await response.json();
 
-                if (result.success) {
-                    formSuccess.classList.add('show');
-                    contactForm.reset();
+            if (result.success) {
+                formSuccess.classList.add('show');
+                contactForm.reset();
 
-                    setTimeout(() => {
-                        formSuccess.classList.remove('show');
-                    }, 6000);
-
-                } else {
-                    alert("Es gab einen kleinen Fehler beim Senden. Bitte schreibe uns stattdessen einfach an info@aivoay.com. Vielen Dank!");
-                    console.log("Fehler Details:", result);
-                }
-
-            } catch (err) {
-                console.error(err);
-                alert("Es gab einen kleinen Fehler beim Senden. Bitte schreibe uns stattdessen einfach an info@aivoay.com. Vielen Dank!");
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                }, 5000);
+            } else {
+                alert("Fehler beim Senden");
+                console.log(result);
             }
         });
     }
+    
 
     // ===== Smooth scroll for anchor links =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -143,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
-                const offset = 72;
+                const offset = 72; // navbar height
                 const pos = target.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top: pos, behavior: 'smooth' });
             }
