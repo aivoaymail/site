@@ -83,7 +83,6 @@
 </head>
 <body>
     <header>
-        <!-- Navigation -->
         <nav class="navbar" id="navbar" aria-label="Hauptnavigation">
             <div class="container nav-container">
                 <a href="#home" class="logo" aria-label="AIVOAY Startseite">
@@ -97,6 +96,12 @@
                         AIV<span class="logo-text1">O</span><span class="logo-text2">A</span><span class="logo-text3">Y</span>
                     </span>
                 </a>
+
+                <div class="mobile-quick-links">
+                    <a href="#home" class="mobile-quick-link">Home</a>
+                    <a href="#dienstleistungen" class="mobile-quick-link">Leistungen</a>
+                    <a href="#kontakt" class="mobile-quick-link">Kontakt</a>
+                </div>
 
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home" class="nav-link active">Home</a></li>
@@ -119,7 +124,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-bg">
                 <img
@@ -151,23 +155,6 @@
                 <div class="hero-actions">
                     <a href="#kontakt" class="btn btn-primary"><strong>Kostenfreies Erstgespräch</strong></a>
                 </div>
-
-                <div class="hero-stats" aria-hidden="true">
-                    <div class="stat">
-                        <span class="stat-number"></span><span class="stat-suffix"></span>
-                        <span class="stat-label"></span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number"></span><span class="stat-suffix"></span>
-                        <span class="stat-label"></span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number"></span><span class="stat-suffix"></span>
-                        <span class="stat-label"></span>
-                    </div>
-                </div>
             </div>
 
             <div class="scroll-indicator" aria-hidden="true">
@@ -175,7 +162,6 @@
             </div>
         </section>
 
-        <!-- Trusted -->
         <section class="trusted-section" aria-label="Vorteile">
             <div class="container">
                 <div class="trusted-logos">
@@ -187,7 +173,6 @@
             </div>
         </section>
 
-        <!-- Dienstleistungen -->
         <section class="services" id="dienstleistungen">
             <div class="container">
                 <div class="section-header">
@@ -200,111 +185,110 @@
                 </div>
 
                 <div class="services-grid">
-    <article class="service-card">
-        <span class="service-badge">Analyse</span>
-        <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 3v18h18"></path>
-                <path d="M7 14l4-4 3 3 5-6"></path>
-                <circle cx="7" cy="14" r="1"></circle>
-                <circle cx="11" cy="10" r="1"></circle>
-                <circle cx="14" cy="13" r="1"></circle>
-                <circle cx="19" cy="7" r="1"></circle>
-            </svg>
-        </div>
-        <h3 class="service-title">KI-Potenziale erkennen</h3>
-        <p class="service-desc">
-            Unsere Experten beraten Sie umfassend zu den Möglichkeiten der Künstlichen Intelligenz
-            und entwickeln eine maßgeschneiderte Strategie für Ihren Erfolg.
-        </p>
-        <ul class="service-features">
-            <li>Potenziale erkennen</li>
-            <li>Machbarkeit prüfen</li>
-            <li>Prioritäten festlegen</li>
-            <li>Passende Lösungen auswählen</li>
-        </ul>
-        <a href="#kontakt" class="service-link">Potenzialanalyse anfragen →</a>
-    </article>
+                    <article class="service-card">
+                        <span class="service-badge">Analyse</span>
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M7 14l4-4 3 3 5-6"></path>
+                                <circle cx="7" cy="14" r="1"></circle>
+                                <circle cx="11" cy="10" r="1"></circle>
+                                <circle cx="14" cy="13" r="1"></circle>
+                                <circle cx="19" cy="7" r="1"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">KI-Potenziale erkennen</h3>
+                        <p class="service-desc">
+                            Wir analysieren gemeinsam, wo KI in Ihrem Unternehmen echten Mehrwert schaffen kann
+                            und welche Anwendungsfälle wirtschaftlich sinnvoll sind.
+                        </p>
+                        <ul class="service-features">
+                            <li>Potenziale erkennen</li>
+                            <li>Machbarkeit prüfen</li>
+                            <li>Prioritäten festlegen</li>
+                            <li>Passende Lösungen auswählen</li>
+                        </ul>
+                        <a href="#kontakt" class="service-link">Potenzialanalyse anfragen →</a>
+                    </article>
 
-    <article class="service-card">
-        <span class="service-badge">Umsetzung</span>
-        <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
-                <path d="M12 2a10 10 0 0 1 10 10"></path>
-                <circle cx="12" cy="12" r="6"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-        </div>
-        <h3 class="service-title">KI-Lösungen einführen</h3>
-        <p class="service-desc">
-            Wir prüfen gemeinsam, wo KI in Ihrem Unternehmen wirklich sinnvoll ist.
-            So schaffen Sie Klarheit, bevor Zeit und Geld in die falschen Themen fließen.
-        </p>
-        <ul class="service-features">
-            <li>Lösungen einführen</li>
-            <li>Systeme anbinden</li>
-            <li>Mitarbeitende schulen</li>
-            <li>Ergebnisse verbessern</li>
-        </ul>
-        <a href="#kontakt" class="service-link">Umsetzung besprechen →</a>
-    </article>
+                    <article class="service-card">
+                        <span class="service-badge">Umsetzung</span>
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                                <path d="M12 2a10 10 0 0 1 10 10"></path>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">KI-Lösungen einführen</h3>
+                        <p class="service-desc">
+                            Wir begleiten die Einführung passender KI-Lösungen – strukturiert,
+                            praxistauglich und abgestimmt auf Ihre bestehenden Abläufe.
+                        </p>
+                        <ul class="service-features">
+                            <li>Lösungen einführen</li>
+                            <li>Systeme anbinden</li>
+                            <li>Mitarbeitende schulen</li>
+                            <li>Ergebnisse verbessern</li>
+                        </ul>
+                        <a href="#kontakt" class="service-link">Umsetzung besprechen →</a>
+                    </article>
 
-    <article class="service-card">
-        <span class="service-badge">Training</span>
-        <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-        </div>
-        <h3 class="service-title">Schulungen &amp; Befähigung</h3>
-        <p class="service-desc">
-            Wir machen Ihr Team fit im Umgang mit KI – praxisnah, verständlich und abgestimmt
-            auf Ihre täglichen Abläufe. So entsteht echtes Vertrauen in neue Werkzeuge.
-        </p>
-        <ul class="service-features">
-            <li>KI-Grundlagen verständlich vermitteln</li>
-            <li>Tools sicher im Alltag anwenden</li>
-            <li>Mitarbeitende aktiv einbinden</li>
-            <li>Wissen nachhaltig im Team verankern</li>
-        </ul>
-        <a href="#kontakt" class="service-link">Schulung anfragen →</a>
-    </article>
+                    <article class="service-card">
+                        <span class="service-badge">Training</span>
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Schulungen &amp; Befähigung</h3>
+                        <p class="service-desc">
+                            Wir machen Ihr Team fit im Umgang mit KI – praxisnah, verständlich und abgestimmt
+                            auf Ihre täglichen Abläufe.
+                        </p>
+                        <ul class="service-features">
+                            <li>KI-Grundlagen verständlich vermitteln</li>
+                            <li>Tools sicher im Alltag anwenden</li>
+                            <li>Mitarbeitende aktiv einbinden</li>
+                            <li>Wissen nachhaltig im Team verankern</li>
+                        </ul>
+                        <a href="#kontakt" class="service-link">Schulung anfragen →</a>
+                    </article>
 
-    <article class="service-card">
-        <span class="service-badge">Sicherheit</span>
-        <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"></path>
-                <path d="M9.5 12l2 2 3.5-4"></path>
-            </svg>
-        </div>
-        <h3 class="service-title">Governance</h3>
-        <p class="service-desc">
-            Wir helfen Ihnen, klare Regeln für den Einsatz von KI aufzustellen – damit Ihr Unternehmen
-            sicher, verantwortungsvoll und regelkonform mit KI arbeitet.
-        </p>
-        <ul class="service-features">
-            <li>Interne KI-Richtlinien erstellen</li>
-            <li>Verantwortlichkeiten klar festlegen</li>
-            <li>Risiken erkennen und bewerten</li>
-            <li>Datenschutz und Compliance sichern</li>
-        </ul>
-        <a href="#kontakt" class="service-link">Governance besprechen →</a>
-    </article>
-</div>
+                    <article class="service-card">
+                        <span class="service-badge">Sicherheit</span>
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"></path>
+                                <path d="M9.5 12l2 2 3.5-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Governance</h3>
+                        <p class="service-desc">
+                            Wir helfen Ihnen, klare Regeln für den Einsatz von KI aufzustellen – damit Ihr Unternehmen
+                            sicher, verantwortungsvoll und regelkonform mit KI arbeitet.
+                        </p>
+                        <ul class="service-features">
+                            <li>Interne KI-Richtlinien erstellen</li>
+                            <li>Verantwortlichkeiten klar festlegen</li>
+                            <li>Risiken erkennen und bewerten</li>
+                            <li>Datenschutz und Compliance sichern</li>
+                        </ul>
+                        <a href="#kontakt" class="service-link">Governance besprechen →</a>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Prozess -->
         <section class="process-section">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Unser Prozess</span>
                     <h2 class="section-title">So gehen wir Schritt für Schritt vor</h2>
                     <p class="section-desc">
-                        In vier klaren Schritten von der Idee bis zur sauberen Umsetzung.<br>
+                        In vier klaren Schritten von der Idee bis zur sauberen Umsetzung.
                         Klar, pragmatisch und verständlich – ohne unnötige Komplexität.
                     </p>
                 </div>
@@ -313,34 +297,33 @@
                     <div class="process-step">
                         <div class="process-number">01</div>
                         <h3>Potenziale erkennen</h3>
-                        <p>Wir prüfen, wo KI in Ihrem Unternehmen wirklich etwas bringt.</p>
+                        <p>Wir prüfen, wo KI in Ihrem Unternehmen wirklich einen Mehrwert bietet.</p>
                     </div>
                     <div class="process-connector"></div>
 
                     <div class="process-step">
                         <div class="process-number">02</div>
                         <h3>Prioritäten festlegen</h3>
-                        <p>Wir legen gemeinsam fest, was zuerst sinnvoll ist.</p>
+                        <p>Wir definieren gemeinsam, welche Themen zuerst sinnvoll umgesetzt werden sollten.</p>
                     </div>
                     <div class="process-connector"></div>
 
                     <div class="process-step">
                         <div class="process-number">03</div>
                         <h3>Lösung umsetzen</h3>
-                        <p>Wir führen die passende Lösung sauber in Ihre Abläufe ein.</p>
+                        <p>Wir führen passende Lösungen strukturiert und sauber in Ihre Abläufe ein.</p>
                     </div>
                     <div class="process-connector"></div>
 
                     <div class="process-step">
                         <div class="process-number">04</div>
                         <h3>Ergebnisse verbessern</h3>
-                        <p>Wir begleiten die Einführung und verbessern die Lösung laufend.</p>
+                        <p>Wir begleiten die Nutzung und optimieren laufend Wirkung, Qualität und Prozesse.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Warum AIVOAY -->
         <section class="features-visual">
             <div class="container">
                 <div class="features-split">
@@ -383,10 +366,7 @@
                             </div>
                             <div>
                                 <h4>Klare Prioritäten statt KI-Chaos</h4>
-                                <p>
-                                    Wir setzen KI dort ein, wo sie im Alltag wirklich hilft – verständlich, passend zu Ihren Abläufen
-                                    und mit klarem Nutzen für Ihr Unternehmen.
-                                </p>
+                                <p>Wir setzen KI dort ein, wo sie im Alltag wirklich hilft – passend zu Ihren Abläufen und mit klarem Nutzen.</p>
                             </div>
                         </div>
 
@@ -406,7 +386,6 @@
             </div>
         </section>
 
-        <!-- Über uns -->
         <section class="about" id="ueber-uns">
             <div class="container">
                 <div class="section-header">
@@ -432,32 +411,37 @@
                     <div class="about-text">
                         <h3>Wofür wir stehen</h3>
                         <p>
-                            Wir haben AIVOAY gegründet, weil viele kleine und mittlere Unternehmen wissen, dass KI
-                            wichtig ist, der Einstieg aber oft unklar ist. <br>-> Genau hier setzen wir an. <br>-> Wir zeigen,
-                            wo KI wirklich sinnvoll ist und was zuerst den größten Nutzen bringt.
+                            Wir haben AIVOAY gegründet, weil viele kleine und mittlere Unternehmen wissen, dass KI wichtig ist,
+                            der Einstieg aber oft unklar bleibt. Genau hier setzen wir an.
                         </p>
                         <p>
-                            -> Dabei arbeiten wir verständlich, praxisnah und ohne unnötige Komplexität. <br>
-                            -> Statt großer KI-Versprechen erhalten Sie klare Prioritäten, persönliche Begleitung und
-                            Lösungen, die im Alltag funktionieren.
+                            Wir zeigen, wo KI wirklich sinnvoll ist, was zuerst den größten Nutzen bringt und wie sich Lösungen
+                            verständlich, praxisnah und ohne unnötige Komplexität umsetzen lassen.
                         </p>
+
+                        <ul class="about-list">
+                            <li>Verständliche Beratung statt Technikfloskeln</li>
+                            <li>Klare Prioritäten statt überladener KI-Strategien</li>
+                            <li>Persönliche Begleitung bei Analyse und Umsetzung</li>
+                            <li>Lösungen, die im Unternehmensalltag wirklich funktionieren</li>
+                        </ul>
 
                         <div class="about-values">
                             <div class="value">
-                                <span class="value-icon"></span>
-                                <span>•&nbsp;&nbsp;Direkt mit den Gründern</span>
+                                <span class="value-icon">•</span>
+                                <span>Direkt mit den Gründern</span>
                             </div>
                             <div class="value">
-                                <span class="value-icon"></span>
-                                <span>•&nbsp;&nbsp;Fokus auf KMU</span>
+                                <span class="value-icon">•</span>
+                                <span>Fokus auf KMU</span>
                             </div>
                             <div class="value">
-                                <span class="value-icon"></span>
-                                <span>•&nbsp;&nbsp;Klare Prioritäten</span>
+                                <span class="value-icon">•</span>
+                                <span>Klare Prioritäten</span>
                             </div>
                             <div class="value">
-                                <span class="value-icon"></span>
-                                <span>•&nbsp;&nbsp;Praxisnahe Umsetzung</span>
+                                <span class="value-icon">•</span>
+                                <span>Praxisnahe Umsetzung</span>
                             </div>
                         </div>
                     </div>
@@ -465,7 +449,6 @@
             </div>
         </section>
 
-        <!-- CTA -->
         <section class="cta-section">
             <div class="container">
                 <div class="cta-card">
@@ -490,7 +473,6 @@
             </div>
         </section>
 
-        <!-- Kontakt -->
         <section class="contact" id="kontakt">
             <div class="container">
                 <div class="section-header">
@@ -622,7 +604,6 @@
             </div>
         </section>
 
-        <!-- Impressum -->
         <section class="impressum" id="impressum">
             <div class="container">
                 <div class="section-header">
@@ -631,10 +612,10 @@
                 </div>
 
                 <div class="impressum-grid">
-                    <div>
-                        <p>AIVOAY e.K. <br>Dorfstraße 17/2<br>71636 Ludwigsburg<br>Deutschland</p>
+                    <div class="impressum-card">
+                        <p><strong>AIVOAY e.K.</strong><br>Dorfstraße 17/2<br>71636 Ludwigsburg<br>Deutschland</p>
                         <p>
-                            Telefon: <a href="tel:+49 (0) 1525 748 5764" class="email-link"> +49 (0) 1525 748 5764</a><br>
+                            Telefon: <a href="tel:+49 (0) 1525 748 5764" class="email-link">+49 (0) 1525 748 5764</a><br>
                             E-Mail: <a href="mailto:info@AIVOAY.com" class="email-link">info@AIVOAY.com</a>
                         </p>
                     </div>
@@ -643,7 +624,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -702,7 +682,6 @@
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="18 15 12 9 6 15"></polyline>
