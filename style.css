@@ -1880,9 +1880,3 @@ ul {
     color: var(--primary-color, #2563eb);
     font-weight: 700;
 }
-@media (max-width: 992px) {
-    .lang-switcher {
-        margin: 15px 0;
-        justify-content: center;
-    }
-}
