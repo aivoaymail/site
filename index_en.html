@@ -109,13 +109,15 @@
                     <li><a href="#dienstleistungen" class="nav-link">Services</a></li>
                     <li><a href="#ueber-uns" class="nav-link">About Us</a></li>
                     <li><a href="#kontakt" class="nav-link">Contact</a></li>
-                    <li class="lang-switcher">
-                        <a href="index.html" class="lang-btn">DE</a> | 
-                        <a href="index_en.html" class="lang-btn active">EN</a>
-                    </li>
                 </ul>
 
-                <a href="#kontakt" class="nav-cta">Free Initial Consultation</a>
+                <div class="nav-right" style="display:flex; align-items:center; gap:30px;">
+                    <a href="#kontakt" class="nav-cta">Free Initial Consultation</a>
+                    <div class="lang-switcher" style="margin-left:70px; gap:10px;">
+                        <a href="index.html" class="lang-btn" title="Deutsch" style="font-size:1.4rem; line-height:1; opacity:0.5; filter:grayscale(100%); transition:all 0.3s;">🇩🇪</a>
+                        <a href="index_en.html" class="lang-btn active" title="English" style="font-size:1.4rem; line-height:1; opacity:1;">🇬🇧</a>
+                    </div>
+                </div>
 
                 <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false" aria-controls="navLinks">
                     <span></span>
@@ -292,8 +294,8 @@
                         </div>
                         <h3 class="service-title">AI Potentials: High manual effort and no clear priority?</h3>
                         <p class="service-desc">
-                            Die besten KI-Hebel für Ihr Company finden
-							Wir zeigen Ihnen, wo KI in Ihrem Company wirklich Nutzen bringt - damit Sie Zeit sparen, Engpässe abbauen und nicht in die falschen Themen investieren.
+                            Finding the best AI levers for your company.<br>
+							We show you where AI truly adds value to your business - so you save time, reduce bottlenecks, and avoid investing in the wrong topics.
                         </p>
                         <ul class="service-features">
                             <li>Identify biggest levers quickly</li>
@@ -313,7 +315,7 @@
                                 <circle cx="12" cy="12" r="2"></circle>
                             </svg>
                         </div>
-                        <h3 class="service-title">Zu viele Ideen, aber keine saubere Implementation? <br>KI-Lösungen wirksam einführen?</h3>
+                        <h3 class="service-title">Too many ideas, but no clean implementation? <br>Effectively introduce AI solutions?</h3>
                         <p class="service-desc">
                             We integrate suitable AI solutions into your processes - practical, close to the system, and with clear benefits for your daily business.
                         </p>
@@ -322,7 +324,7 @@
                             <li>Use tools safely in everyday work</li>
                             <li>Anchor knowledge in the team</li>
                         </ul>
-                        <a href="#kontakt" class="service-link">Implementation besprechen →</a>
+                        <a href="#kontakt" class="service-link">Discuss implementation →</a>
                     </article>
 
                     <article class="service-card">
@@ -336,8 +338,8 @@
                         <h3 class="service-title">Make training more engaging and suitable for daily work</h3>
                         <p class="service-desc">
                             
-							Ihr Team ist noch unsicher im Umgang mit KI? Mitarbeitende fit für KI machen
-							Wir schulen ihr Team so, dass KI im Alltag verstanden und sicher genutzt wird - verständlich, praxisnah und ohne Berührungsängst
+							Is your team still unsure about using AI? Make employees fit for AI.<br>
+							We train your team so that AI is understood and safely used in daily work - understandably, practically, and without fear of contact.
                         </p>
                         <ul class="service-features">
                             <li>Make AI understandable</li>
@@ -357,9 +359,9 @@
                         </div>
                         <h3 class="service-title">Formulate governance more understandably and value-oriented</h3>
                         <p class="service-desc">
-                            KI nutzen, aber Risiken vermeiden? <br>
-                            KI sicher und regelkonform einsetzen
-							Wir schaffen klare Regeln, Rollen und Freigaben, damit ihr Company KI sicher, nachvollziehbar und verantwortungsvoll einsetzt.
+                            Use AI but avoid risks? <br>
+                            Use AI safely and in compliance with rules.<br>
+							We establish clear rules, roles, and approvals so that your company uses AI safely, comprehensibly, and responsibly.
                         </p>
                         <ul class="service-features">
                             <li>Define guidelines and responsibilities</li>
@@ -511,14 +513,14 @@
                         <ul class="about-list">
                             <li>Understandable consulting instead of technical jargon</li>
                             <li>Clear priorities instead of overloaded AI strategies</li>
-                            <li>Persönliche Begleitung bei Analysis und Implementation</li>
+                            <li>Personal guidance during analysis and implementation</li>
                             <li>Solutions that truly work in everyday business</li>
                         </ul>
 
                         <div class="about-values">
                             <div class="value">
                                 <span class="value-icon">•</span>
-                                <span>Direkt mit den Gründern</span>
+                                <span>Directly with the founders</span>
                             </div>
                             <div class="value">
                                 <span class="value-icon">•</span>
@@ -526,11 +528,11 @@
                             </div>
                             <div class="value">
                                 <span class="value-icon">•</span>
-                                <span>Klare Prioritäten</span>
+                                <span>Clear priorities</span>
                             </div>
                             <div class="value">
                                 <span class="value-icon">•</span>
-                                <span>Praxisnahe Implementation</span>
+                                <span>Practical implementation</span>
                             </div>
                         </div>
                     </div>
@@ -620,18 +622,18 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required placeholder="Your Name" autocomplete="name">
+                                <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
                             </div>
                             <div class="form-group">
                                 <label for="company">Company</label>
-                                <input type="text" id="company" name="company" placeholder="Ihr Company" autocomplete="organization">
+                                <input type="text" id="company" name="company" placeholder="Your Company" autocomplete="organization">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required placeholder="ihre@email.de" autocomplete="email">
+                                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
@@ -643,9 +645,9 @@
                             <label>Desired service (multiple selection possible)</label>
                             <div class="checkbox-group">
                                 <label class="checkbox-option">
-                                    <input type="checkbox" name="service[]" value="KI-Identify Potentials">
+                                    <input type="checkbox" name="service[]" value="AI-potential analysis">
                                     <span class="checkbox-custom"></span>
-                                    <span class="checkbox-label">KI-Identify Potentials</span>
+                                    <span class="checkbox-label">AI-potential analysis</span>
                                 </label>
 
                                 <label class="checkbox-option">
