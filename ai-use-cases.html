@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Use Cases in SMEs – AIVOAY</title>
+    <meta name="description" content="Discover typical, field-tested AI use cases for small and medium-sized enterprises. Filterable by purchasing, HR, marketing, sales, and administration.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="AIVOAY">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://www.aivoay.com/ai-use-cases.html">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar" aria-label="Main Navigation">
+            <div class="container nav-container">
+                <a href="index_en.html" class="logo" aria-label="AIVOAY Home">
+                    <img
+                        src="bilder/AIVOAY_logo.jpg"
+                        alt="AIVOAY Logo"
+                        class="logo-img"
+                        decoding="async"
+                    >
+                    <span class="logo-text">
+                        AIV<span class="logo-text1">O</span><span class="logo-text2">A</span><span class="logo-text3">Y</span>
+                    </span>
+                </a>
+
+                <div class="mobile-quick-links">
+                    <a href="index_en.html" class="mobile-quick-link">Home</a>
+                    <a href="index_en.html#dienstleistungen" class="mobile-quick-link">Services</a>
+                    <a href="index_en.html#kontakt" class="mobile-quick-link">Contact</a>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index_en.html" class="nav-link">Home</a></li>
+                    <li><a href="index_en.html#dienstleistungen" class="nav-link">Services</a></li>
+                    <li><a href="ai-use-cases.html" class="nav-link active">AI Use Cases</a></li>
+                    <li><a href="index_en.html#ueber-uns" class="nav-link">About Us</a></li>
+                    <li><a href="index_en.html#kontakt" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-right" style="display:flex; align-items:center; gap:30px;">
+                    <a href="index_en.html#kontakt" class="nav-cta">Free Analysis</a>
+                    <div class="lang-switcher" style="margin-left:70px; gap:10px;">
+                        <a href="ki-anwendungsfaelle.html" class="lang-btn" title="Deutsch" style="font-size:1.4rem; line-height:1; opacity:0.5; filter:grayscale(100%); transition:all 0.3s;">🇩🇪</a>
+                        <a href="ai-use-cases.html" class="lang-btn active" title="English" style="font-size:1.4rem; line-height:1; opacity:1;">🇬🇧</a>
+                    </div>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="directory-hero">
+            <div class="container directory-hero-content">
+                <span class="section-tag">Use Cases</span>
+                <h1 class="hero-title">AI Use Case Directory for SMEs</h1>
+                <p class="hero-subtitle">
+                    Discover practical examples and typical scenarios showing how artificial intelligence simplifies work processes in small and medium-sized enterprises today.
+                </p>
+            </div>
+        </section>
+
+        <section class="directory-section">
+            <div class="container">
+                <!-- Search and Filter Bar -->
+                <div class="filter-wrapper">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="useCaseSearch" placeholder="Search use cases...">
+                    </div>
+
+                    <div class="filter-container">
+                        <button class="filter-btn active" data-filter="all">All Categories</button>
+                        <button class="filter-btn" data-filter="purchasing">📦 Purchasing</button>
+                        <button class="filter-btn" data-filter="hr">👥 HR / Personnel</button>
+                        <button class="filter-btn" data-filter="marketing">📢 Marketing</button>
+                        <button class="filter-btn" data-filter="sales">💰 Sales</button>
+                        <button class="filter-btn" data-filter="administration">📁 Administration / Operations</button>
+                    </div>
+                </div>
+
+                <!-- Grid for cards -->
+                <div class="use-case-grid" id="useCaseGrid">
+                    
+                    <!-- Purchasing Case 1 -->
+                    <div class="use-case-card" data-category="purchasing" id="purchasing-bedarf">
+                        <div class="card-header">
+                            <span class="category-badge">Purchasing</span>
+                            <div class="card-icon">📦</div>
+                        </div>
+                        <h3>Demand Forecasting & Inventory Optimization</h3>
+                        <p class="card-summary">
+                            AI predicts future demand for raw materials and products based on historical order data and seasonal patterns.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Excess inventory binds capital, while supply bottlenecks disrupt operations.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Intelligent forecasting models determine the optimal order time.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Reduction of storage costs and decreased out-of-stock risk.</div>
+                        </div>
+                    </div>
+
+                    <!-- Purchasing Case 2 -->
+                    <div class="use-case-card" data-category="purchasing" id="purchasing-preise">
+                        <div class="card-header">
+                            <span class="category-badge">Purchasing</span>
+                            <div class="card-icon">📊</div>
+                        </div>
+                        <h3>Automated Price Comparison</h3>
+                        <p class="card-summary">
+                            AI-supported systems crawl, structure, and compare supplier quotes in real time.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Manually compiling supplier quotes in different formats takes hours.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Large language models extract items from PDFs and display them side-by-side.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Quick decision-making basis and direct identification of savings potential.</div>
+                        </div>
+                    </div>
+
+                    <!-- Purchasing Case 3 -->
+                    <div class="use-case-card" data-category="purchasing" id="purchasing-risiko">
+                        <div class="card-header">
+                            <span class="category-badge">Purchasing</span>
+                            <div class="card-icon">⚠️</div>
+                        </div>
+                        <h3>Supplier Risk Management</h3>
+                        <p class="card-summary">
+                            Continuous data analysis monitors reliability and price trends of global suppliers.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Late warnings about supplier defaults endanger production.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> AI evaluates external news and internal delivery reliability data.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Proactive switching to alternative suppliers before a bottleneck occurs.</div>
+                        </div>
+                    </div>
+
+                    <!-- HR Case 1 -->
+                    <div class="use-case-card" data-category="hr" id="hr-screening">
+                        <div class="card-header">
+                            <span class="category-badge">HR / Personnel</span>
+                            <div class="card-icon">👥</div>
+                        </div>
+                        <h3>Applicant Screening (Pre-selection)</h3>
+                        <p class="card-summary">
+                            AI matches incoming resumes in a structured way with the job requirements.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Manually reviewing hundreds of unstructured profiles binds HR resources.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Semantic matching of qualifications and work experience.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> HR receives a pre-sorted evaluation of the most suitable candidates.</div>
+                        </div>
+                    </div>
+
+                    <!-- HR Case 2 -->
+                    <div class="use-case-card" data-category="hr" id="hr-onboarding">
+                        <div class="card-header">
+                            <span class="category-badge">HR / Personnel</span>
+                            <div class="card-icon">🤖</div>
+                        </div>
+                        <h3>Employee Onboarding Assistant</h3>
+                        <p class="card-summary">
+                            An internal chatbot answers new team members' questions about processes, systems, and guidelines.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Repetitive questions burden experienced colleagues during onboarding.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> A RAG system searches for answers in SOPs and internal guidelines.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Higher satisfaction for new employees and relief for existing team members.</div>
+                        </div>
+                    </div>
+
+                    <!-- HR Case 3 -->
+                    <div class="use-case-card" data-category="hr" id="hr-stellenanzeigen">
+                        <div class="card-header">
+                            <span class="category-badge">HR / Personnel</span>
+                            <div class="card-icon">✍️</div>
+                        </div>
+                        <h3>Job Description Optimization</h3>
+                        <p class="card-summary">
+                            Optimizing job descriptions to increase conversion rates and precisely target candidate groups.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Imprecise or unattractive postings attract the wrong profiles.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Writing tools adjust tone and keywords to the target group.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Qualitatively better applications and faster filling of open positions.</div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Case 1 -->
+                    <div class="use-case-card" data-category="marketing" id="marketing-seo">
+                        <div class="card-header">
+                            <span class="category-badge">Marketing</span>
+                            <div class="card-icon">📢</div>
+                        </div>
+                        <h3>SEO & Content Creation</h3>
+                        <p class="card-summary">
+                            Generating quality content for websites, blogs, and social media based on target keywords.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Regular content creation costs agency budgets and time.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Text AI creates customized drafts optimized for search engines.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Drastically reduced production time for marketing content.</div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Case 2 -->
+                    <div class="use-case-card" data-category="marketing" id="marketing-segmentierung">
+                        <div class="card-header">
+                            <span class="category-badge">Marketing</span>
+                            <div class="card-icon">🎯</div>
+                        </div>
+                        <h3>Customer Behavior Segmentation</h3>
+                        <p class="card-summary">
+                            AI analyzes customer profiles and purchasing behavior to automatically form marketing segments.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> One-size-fits-all newsletters have poor open and click rates.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Pattern recognition divides the customer base into interest groups.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Personalized campaigns with measurably higher sales.</div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Case 3 -->
+                    <div class="use-case-card" data-category="marketing" id="marketing-ads">
+                        <div class="card-header">
+                            <span class="category-badge">Marketing</span>
+                            <div class="card-icon">📈</div>
+                        </div>
+                        <h3>Paid Ads Campaign Management</h3>
+                        <p class="card-summary">
+                            Optimizing advertisements on Google and social media through automatic bid and budget adjustment.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Daily manual adjustments in the ad manager require a lot of expertise.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Machine learning algorithms distribute budgets to the best-performing ads.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Lower cost per click and maximum efficiency of the advertising budget.</div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Case 1 -->
+                    <div class="use-case-card" data-category="sales" id="sales-angebote">
+                        <div class="card-header">
+                            <span class="category-badge">Sales</span>
+                            <div class="card-icon">💰</div>
+                        </div>
+                        <h3>AI-Powered Proposal Generation</h3>
+                        <p class="card-summary">
+                            Drafting complex proposals based on specifications, CRM data, and price lists.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Sales reps spend hours drafting technical proposals.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> The system pulls required information from CRM/ERP and drafts the proposal.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Reduced response times to customer inquiries and faster closings.</div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Case 2 -->
+                    <div class="use-case-card" data-category="sales" id="sales-scoring">
+                        <div class="card-header">
+                            <span class="category-badge">Sales</span>
+                            <div class="card-icon">⚡</div>
+                        </div>
+                        <h3>Intelligent Lead Scoring</h3>
+                        <p class="card-summary">
+                            Prioritizing incoming inquiries by probability of closing and customer value.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Too much time is spent on low-potential leads.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Evaluation of leads based on historical sales data.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Sales focus on the most lucrative opportunities.</div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Case 3 -->
+                    <div class="use-case-card" data-category="sales" id="sales-emails">
+                        <div class="card-header">
+                            <span class="category-badge">Sales</span>
+                            <div class="card-icon">✉️</div>
+                        </div>
+                        <h3>Sales Email Follow-Ups</h3>
+                        <p class="card-summary">
+                            Personalized and timed follow-up emails to potential clients for reactivation.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Following up on proposals often gets lost in daily operations.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> AI formulates tailored emails based on previous conversation history.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Higher lead-to-customer conversion rate with minimal effort.</div>
+                        </div>
+                    </div>
+
+                    <!-- Administration Case 1 -->
+                    <div class="use-case-card" data-category="administration" id="administration-belege">
+                        <div class="card-header">
+                            <span class="category-badge">Administration</span>
+                            <div class="card-icon">📁</div>
+                        </div>
+                        <h3>Document & Invoice Extraction</h3>
+                        <p class="card-summary">
+                            Incoming invoices are read, amounts verified, and automatically posted to the ERP system.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Manual verification and entry of invoices binds accounting resources.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Intelligent OCR extracts metadata, taxes, and IBANs accurately.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Virtually error-free and extremely accelerated invoice processing.</div>
+                        </div>
+                    </div>
+
+                    <!-- Administration Case 2 -->
+                    <div class="use-case-card" data-category="administration" id="administration-emails">
+                        <div class="card-header">
+                            <span class="category-badge">Administration</span>
+                            <div class="card-icon">📨</div>
+                        </div>
+                        <h3>Email Inbox Pre-Sorting</h3>
+                        <p class="card-summary">
+                            Incoming mail to general info boxes is classified and assigned to the correct contact person.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Daily manual distribution of incoming emails causes delays.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> Text classification analyzes subject and content for intent.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Fast response times and clear structure in the team mailbox.</div>
+                        </div>
+                    </div>
+
+                    <!-- Administration Case 3 -->
+                    <div class="use-case-card" data-category="administration" id="administration-sops">
+                        <div class="card-header">
+                            <span class="category-badge">Administration</span>
+                            <div class="card-icon">📋</div>
+                        </div>
+                        <h3>Standard Operating Procedures (SOPs)</h3>
+                        <p class="card-summary">
+                            Automatic generation of structured SOPs from informal notes or audio recordings.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Challenge:</strong> Important workflows are not documented because documentation is too tedious.</div>
+                            <div class="detail-item"><strong>AI Approach:</strong> AI structures informal notes into precise, easy-to-understand step-by-step guides.</div>
+                            <div class="detail-item"><strong>Benefit:</strong> Easily accessible company knowledge and fast training times.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2>Which process would you like to optimize in your company?</h2>
+                        <p>
+                            Let's check together which of these use cases has the greatest lever in your business.
+                        </p>
+                        <a href="index_en.html#kontakt" class="btn btn-white">Arrange a free AI potential analysis</a>
+                    </div>
+                    <div class="cta-image">
+                        <img
+                            src="bilder/satheeshsankaran-ai-generated-8686233_1920.jpg"
+                            alt="Process optimization with AI"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index_en.html" class="logo" aria-label="AIVOAY Home">
+                        <img
+                            src="bilder/AIVOAY_logo.jpg"
+                            alt="AIVOAY Logo"
+                            class="logo-img"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                        <span class="logo-text">
+                            AIV<span class="logo-text4">O</span><span class="logo-text5">A</span><span class="logo-text6">Y</span>
+                        </span>
+                    </a>
+                    <p>
+                        Operational AI Partner for small and medium-sized enterprises.
+                        The right AI solutions for your company.
+                        Clear priorities. Implement step by step.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index_en.html">Home</a></li>
+                        <li><a href="index_en.html#dienstleistungen">Services</a></li>
+                        <li><a href="ai-use-cases.html">AI Use Cases</a></li>
+                        <li><a href="index_en.html#ueber-uns">About Us</a></li>
+                        <li><a href="index_en.html#kontakt">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index_en.html#dienstleistungen">AI Potential Analysis</a></li>
+                        <li><a href="index_en.html#dienstleistungen">Introduce AI solutions</a></li>
+                        <li><a href="index_en.html#dienstleistungen">Training &amp; Enablement</a></li>
+                        <li><a href="index_en.html#dienstleistungen">Governance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="impressum_en.html">Imprint</a></li>
+                        <li><a href="impressum_en.html#datenschutz">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIVOAY All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Inline Filter and Search Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('useCaseSearch');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.use-case-card');
+            
+            let activeFilter = 'all';
+            let searchQuery = '';
+
+            function updateDirectory() {
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const textContent = card.innerText.toLowerCase();
+                    
+                    const matchesFilter = (activeFilter === 'all' || category === activeFilter);
+                    const matchesSearch = textContent.includes(searchQuery);
+
+                    if (matchesFilter && matchesSearch) {
+                        card.style.display = 'flex';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    } else {
+                        card.style.display = 'none';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px)';
+                    }
+                });
+            }
+
+            // Search input handler
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase();
+                updateDirectory();
+            });
+
+            // Filter button handler
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeFilter = btn.getAttribute('data-filter');
+                    updateDirectory();
+                });
+            });
+
+            // Handle anchors in URL (e.g. #hr or #sales)
+            const handleHash = () => {
+                const hash = window.location.hash.substring(1);
+                if (hash) {
+                    const targetBtn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+                    if (targetBtn) {
+                        targetBtn.click();
+                    } else {
+                        const targetCard = document.getElementById(hash);
+                        if (targetCard) {
+                            const cat = targetCard.getAttribute('data-category');
+                            const catBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+                            if (catBtn) catBtn.click();
+                            setTimeout(() => {
+                                targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                targetCard.style.outline = '2px solid var(--primary)';
+                                targetCard.style.outlineOffset = '4px';
+                                setTimeout(() => targetCard.style.outline = 'none', 3000);
+                            }, 300);
+                        }
+                    }
+                }
+            };
+
+            handleHash();
+            window.addEventListener('hashchange', handleHash);
+        });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>

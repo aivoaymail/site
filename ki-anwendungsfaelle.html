@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Anwendungsfälle im Mittelstand – AIVOAY</title>
+    <meta name="description" content="Entdecken Sie typische, praxiserprobte KI-Anwendungsfälle für kleine und mittlere Unternehmen. Filterbar nach Einkauf, HR, Marketing, Vertrieb und Verwaltung.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="AIVOAY">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://www.aivoay.com/ki-anwendungsfaelle.html">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar" aria-label="Hauptnavigation">
+            <div class="container nav-container">
+                <a href="index.html" class="logo" aria-label="AIVOAY Startseite">
+                    <img
+                        src="bilder/AIVOAY_logo.jpg"
+                        alt="AIVOAY Logo"
+                        class="logo-img"
+                        decoding="async"
+                    >
+                    <span class="logo-text">
+                        AIV<span class="logo-text1">O</span><span class="logo-text2">A</span><span class="logo-text3">Y</span>
+                    </span>
+                </a>
+
+                <div class="mobile-quick-links">
+                    <a href="index.html" class="mobile-quick-link">Home</a>
+                    <a href="index.html#dienstleistungen" class="mobile-quick-link">Leistungen</a>
+                    <a href="index.html#kontakt" class="mobile-quick-link">Kontakt</a>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#dienstleistungen" class="nav-link">Dienstleistungen</a></li>
+                    <li><a href="ki-anwendungsfaelle.html" class="nav-link active">KI-Anwendungsfälle</a></li>
+                    <li><a href="index.html#ueber-uns" class="nav-link">Über uns</a></li>
+                    <li><a href="index.html#kontakt" class="nav-link">Kontakt</a></li>
+                </ul>
+
+                <div class="nav-right" style="display:flex; align-items:center; gap:30px;">
+                    <a href="index.html#kontakt" class="nav-cta">Kostenfreie Analyse</a>
+                    <div class="lang-switcher" style="margin-left:70px; gap:10px;">
+                        <a href="ki-anwendungsfaelle.html" class="lang-btn active" title="Deutsch" style="font-size:1.4rem; line-height:1; opacity:1;">🇩🇪</a>
+                        <a href="ai-use-cases.html" class="lang-btn" title="English" style="font-size:1.4rem; line-height:1; opacity:0.5; filter:grayscale(100%); transition:all 0.3s;">🇬🇧</a>
+                    </div>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="directory-hero">
+            <div class="container directory-hero-content">
+                <span class="section-tag">Anwendungsfälle</span>
+                <h1 class="hero-title">KI-Verzeichnis für den Mittelstand</h1>
+                <p class="hero-subtitle">
+                    Entdecken Sie praxisnahe Beispiele und typische Szenarien, wie künstliche Intelligenz heute schon Arbeitsprozesse in kleinen und mittleren Unternehmen vereinfacht.
+                </p>
+            </div>
+        </section>
+
+        <section class="directory-section">
+            <div class="container">
+                <!-- Such- und Filterleiste -->
+                <div class="filter-wrapper">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="useCaseSearch" placeholder="Anwendungsfälle durchsuchen...">
+                    </div>
+
+                    <div class="filter-container">
+                        <button class="filter-btn active" data-filter="all">Alle Bereiche</button>
+                        <button class="filter-btn" data-filter="einkauf">📦 Einkauf</button>
+                        <button class="filter-btn" data-filter="hr">👥 HR / Personal</button>
+                        <button class="filter-btn" data-filter="marketing">📢 Marketing</button>
+                        <button class="filter-btn" data-filter="sales">💰 Vertrieb / Sales</button>
+                        <button class="filter-btn" data-filter="verwaltung">📁 Verwaltung / Operations</button>
+                    </div>
+                </div>
+
+                <!-- Grid für die Kacheln -->
+                <div class="use-case-grid" id="useCaseGrid">
+                    
+                    <!-- Einkauf Case 1 -->
+                    <div class="use-case-card" data-category="einkauf" id="einkauf-bedarf">
+                        <div class="card-header">
+                            <span class="category-badge">Einkauf</span>
+                            <div class="card-icon">📦</div>
+                        </div>
+                        <h3>Bedarfsplanung & Bestelloptimierung</h3>
+                        <p class="card-summary">
+                            KI prognostiziert den zukünftigen Bedarf an Rohstoffen und Produkten basierend auf historischen Bestelldaten und Saisonalitäten.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Überbestände binden Kapital, während Lieferengpässe den Betrieb blockieren.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Intelligente Vorhersagemodelle ermitteln den optimalen Bestellzeitpunkt.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Senkung der Lagerkosten und verringertes Out-of-Stock-Risiko.</div>
+                        </div>
+                    </div>
+
+                    <!-- Einkauf Case 2 -->
+                    <div class="use-case-card" data-category="einkauf" id="einkauf-preise">
+                        <div class="card-header">
+                            <span class="category-badge">Einkauf</span>
+                            <div class="card-icon">📊</div>
+                        </div>
+                        <h3>Automatisierter Preisvergleich</h3>
+                        <p class="card-summary">
+                            KI-gestützte Systeme crawlen und strukturieren Lieferantenangebote und vergleichen sie in Echtzeit.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Manuelle Aufbereitung unterschiedlicher Angebotsformate kostet Stunden.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Sprachmodelle extrahieren Positionen aus PDFs und stellen sie tabellarisch gegenüber.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Schnelle Entscheidungsgrundlage und direkte Hebung von Sparpotenzialen.</div>
+                        </div>
+                    </div>
+
+                    <!-- Einkauf Case 3 -->
+                    <div class="use-case-card" data-category="einkauf" id="einkauf-risiko">
+                        <div class="card-header">
+                            <span class="category-badge">Einkauf</span>
+                            <div class="card-icon">⚠️</div>
+                        </div>
+                        <h3>Lieferanten-Risikomanagement</h3>
+                        <p class="card-summary">
+                            Kontinuierliche Datenanalyse überwacht die Zuverlässigkeit und Preistrends bei globalen Lieferanten.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Späte Warnungen bei Lieferantenausfällen gefährden die Produktion.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> KI bewertet externe Nachrichten und interne Liefertreue-Daten.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Proaktiver Wechsel zu Alternativlieferanten vor Eintreten eines Engpasses.</div>
+                        </div>
+                    </div>
+
+                    <!-- HR Case 1 -->
+                    <div class="use-case-card" data-category="hr" id="hr-screening">
+                        <div class="card-header">
+                            <span class="category-badge">HR / Personal</span>
+                            <div class="card-icon">👥</div>
+                        </div>
+                        <h3>Bewerber-Vorauswahl (Screening)</h3>
+                        <p class="card-summary">
+                            KI gleicht eingehende Lebensläufe strukturiert mit den Anforderungen der Stellenausschreibung ab.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Das manuelle Sichten hunderter unstrukturierter Profile bindet HR-Ressourcen.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Semantischer Abgleich von Qualifikationen und Berufserfahrung.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> HR erhält eine vorsortierte Auswertung der am besten passenden Kandidaten.</div>
+                        </div>
+                    </div>
+
+                    <!-- HR Case 2 -->
+                    <div class="use-case-card" data-category="hr" id="hr-onboarding">
+                        <div class="card-header">
+                            <span class="category-badge">HR / Personal</span>
+                            <div class="card-icon">🤖</div>
+                        </div>
+                        <h3>Mitarbeiter-Onboarding-Assistent</h3>
+                        <p class="card-summary">
+                            Ein interner Chatbot beantwortet neuen Teammitgliedern alle Fragen rund um Abläufe, Systeme und Richtlinien.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Wiederkehrende Fragen belasten erfahrene Kollegen während der Einarbeitung.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Ein RAG-System sucht Antworten in SOPs und internen Leitfäden.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Höhere Zufriedenheit neuer Mitarbeiter und Entlastung der Bestandskollegen.</div>
+                        </div>
+                    </div>
+
+                    <!-- HR Case 3 -->
+                    <div class="use-case-card" data-category="hr" id="hr-stellenanzeigen">
+                        <div class="card-header">
+                            <span class="category-badge">HR / Personal</span>
+                            <div class="card-icon">✍️</div>
+                        </div>
+                        <h3>Stellenanzeigen-Optimierung</h3>
+                        <p class="card-summary">
+                            Optimierung von Jobbeschreibungen zur Erhöhung der Conversion-Rate und passgenauen Bewerberansprache.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Unpräzise oder unattraktive Ausschreibungen ziehen falsche Profile an.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Formulierungshilfen passen Tonalität und Keywords an die Zielgruppe an.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Qualitativ bessere Bewerbungen und schnellere Besetzung freier Stellen.</div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Case 1 -->
+                    <div class="use-case-card" data-category="marketing" id="marketing-seo">
+                        <div class="card-header">
+                            <span class="category-badge">Marketing</span>
+                            <div class="card-icon">📢</div>
+                        </div>
+                        <h3>SEO & Content-Erstellung</h3>
+                        <p class="card-summary">
+                            Generierung von qualitativen Texten für Webseiten, Blogs und Social Media basierend auf Keywords.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Regelmäßige Content-Erstellung kostet Agentur-Budgets und Zeit.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Text-KI erstellt passgenaue Entwürfe, die auf Suchmaschinen optimiert sind.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Drastisch reduzierte Produktionszeit für Marketinginhalte.</div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Case 2 -->
+                    <div class="use-case-card" data-category="marketing" id="marketing-segmentierung">
+                        <div class="card-header">
+                            <span class="category-badge">Marketing</span>
+                            <div class="card-icon">🎯</div>
+                        </div>
+                        <h3>Kundenverhalten-Segmentierung</h3>
+                        <p class="card-summary">
+                            KI analysiert Kundenprofile und Kaufverhalten zur automatisierten Bildung von Marketing-Segmenten.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> One-size-fits-all Newsletter haben schlechte Öffnungs- und Klickraten.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Mustererkennung teilt den Kundenstamm in Interessengruppen ein.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Personalisierte Kampagnen mit messbar höherem Umsatz.</div>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Case 3 -->
+                    <div class="use-case-card" data-category="marketing" id="marketing-ads">
+                        <div class="card-header">
+                            <span class="category-badge">Marketing</span>
+                            <div class="card-icon">📈</div>
+                        </div>
+                        <h3>Paid Ads Kampagnen-Steuerung</h3>
+                        <p class="card-summary">
+                            Optimierung von Werbeanzeigen auf Google und Social Media durch automatische Gebots- und Budgetanpassung.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Täglich manuelle Anpassungen im Ad-Manager erfordern viel Fachwissen.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Machine-Learning-Algorithmen verteilen Budgets auf die besten Anzeigen.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Geringerer Klickpreis und maximale Effizienz des Werbebudgets.</div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Case 1 -->
+                    <div class="use-case-card" data-category="sales" id="sales-angebote">
+                        <div class="card-header">
+                            <span class="category-badge">Vertrieb</span>
+                            <div class="card-icon">💰</div>
+                        </div>
+                        <h3>KI-gestützte Angebotserstellung</h3>
+                        <p class="card-summary">
+                            Entwurfserstellung komplexer Angebote basierend auf Lastenheften, CRM-Daten und Preislisten.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Vertriebler verbringen Stunden mit dem Formulieren technischer Angebote.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> System zieht benötigte Infos aus CRM/ERP und formuliert das Angebot.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Reduzierte Antwortzeiten auf Kundenanfragen und schnellere Abschlüsse.</div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Case 2 -->
+                    <div class="use-case-card" data-category="sales" id="sales-scoring">
+                        <div class="card-header">
+                            <span class="category-badge">Vertrieb</span>
+                            <div class="card-icon">⚡</div>
+                        </div>
+                        <h3>Intelligentes Lead-Scoring</h3>
+                        <p class="card-summary">
+                            Priorisierung eingehender Anfragen nach Abschlusswahrscheinlichkeit und Kundenwert.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Zu viel Zeit wird für Leads mit geringem Potenzial aufgewendet.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Bewertung der Anfragen anhand historischer Verkaufsdaten.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Fokussierung des Vertriebs auf die lukrativsten Chancen.</div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Case 3 -->
+                    <div class="use-case-card" data-category="sales" id="sales-emails">
+                        <div class="card-header">
+                            <span class="category-badge">Vertrieb</span>
+                            <div class="card-icon">✉️</div>
+                        </div>
+                        <h3>Verkaufs-E-Mail Follow-ups</h3>
+                        <p class="card-summary">
+                            Personalisierte und zeitgesteuerte Follow-up E-Mails an potenzielle Kunden zur Reaktivierung.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Nachfassen von Angeboten geht im Alltagsgeschäft häufig unter.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> KI formuliert maßgeschneiderte E-Mails basierend auf dem Gesprächsverlauf.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Höhere Lead-zu-Kunden Konversionsrate bei minimalem Aufwand.</div>
+                        </div>
+                    </div>
+
+                    <!-- Verwaltung Case 1 -->
+                    <div class="use-case-card" data-category="verwaltung" id="verwaltung-belege">
+                        <div class="card-header">
+                            <span class="category-badge">Verwaltung</span>
+                            <div class="card-icon">📁</div>
+                        </div>
+                        <h3>Beleg- & Rechnungsextraktion</h3>
+                        <p class="card-summary">
+                            Eingehende Dokumente werden ausgelesen, Beträge validiert und automatisch im ERP verbucht.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Manuelle Prüfung und Eingabe von Belegen bindet die Buchhaltung.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Intelligente OCR extrahiert Metadaten, Steuern und IBANs treffsicher.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Nahezu fehlerfreie und extrem beschleunigte Rechnungsverarbeitung.</div>
+                        </div>
+                    </div>
+
+                    <!-- Verwaltung Case 2 -->
+                    <div class="use-case-card" data-category="verwaltung" id="verwaltung-emails">
+                        <div class="card-header">
+                            <span class="category-badge">Verwaltung</span>
+                            <div class="card-icon">📨</div>
+                        </div>
+                        <h3>E-Mail-Posteingang Vorsortierung</h3>
+                        <p class="card-summary">
+                            Eingehende Post an Info-Postfächer wird klassifiziert und dem richtigen Ansprechpartner zugewiesen.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Tägliches manuelles Verteilen von E-Mails führt zu Verzögerungen.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> Text-Klassifizierung analysiert Betreff und Inhalt auf Absicht.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Schnelle Reaktionszeiten und Struktur im Teampostfach.</div>
+                        </div>
+                    </div>
+
+                    <!-- Verwaltung Case 3 -->
+                    <div class="use-case-card" data-category="verwaltung" id="verwaltung-sops">
+                        <div class="card-header">
+                            <span class="category-badge">Verwaltung</span>
+                            <div class="card-icon">📋</div>
+                        </div>
+                        <h3>Standard-Arbeitsanweisungen (SOPs)</h3>
+                        <p class="card-summary">
+                            Automatisches Erstellen strukturierter SOPs aus stichpunktartigen Prozessbeschreibungen oder Audiospur.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-item"><strong>Herausforderung:</strong> Wichtige Abläufe sind nicht dokumentiert, weil die Dokumentation zu mühsam ist.</div>
+                            <div class="detail-item"><strong>KI-Ansatz:</strong> KI strukturiert formlose Notizen in präzise, verständliche Schritt-für-Schritt-Anleitungen.</div>
+                            <div class="detail-item"><strong>Nutzen:</strong> Leicht zugängliches Firmenwissen und schnelle Einarbeitungszeiten.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA-Bereich am Ende -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2>Welchen Prozess möchten Sie in Ihrem Unternehmen optimieren?</h2>
+                        <p>
+                            Lassen Sie uns gemeinsam prüfen, welche dieser Anwendungsfälle in Ihrem Betrieb den größten Hebel haben.
+                        </p>
+                        <a href="index.html#kontakt" class="btn btn-white">Kostenlose KI-Potenzialanalyse vereinbaren</a>
+                    </div>
+                    <div class="cta-image">
+                        <img
+                            src="bilder/satheeshsankaran-ai-generated-8686233_1920.jpg"
+                            alt="Prozessoptimierung mit KI"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="AIVOAY Startseite">
+                        <img
+                            src="bilder/AIVOAY_logo.jpg"
+                            alt="AIVOAY Logo"
+                            class="logo-img"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                        <span class="logo-text">
+                            AIV<span class="logo-text4">O</span><span class="logo-text5">A</span><span class="logo-text6">Y</span>
+                        </span>
+                    </a>
+                    <p>
+                        Operational AI Partner für kleine und mittlere Unternehmen.
+                        Die richtigen KI-Lösungen für Ihr Unternehmen.
+                        Klar priorisieren. Schritt für Schritt umsetzen.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#dienstleistungen">Dienstleistungen</a></li>
+                        <li><a href="ki-anwendungsfaelle.html">KI-Anwendungsfälle</a></li>
+                        <li><a href="index.html#ueber-uns">Über uns</a></li>
+                        <li><a href="index.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Dienstleistungen</h4>
+                    <ul>
+                        <li><a href="index.html#dienstleistungen">KI-Potenziale erkennen</a></li>
+                        <li><a href="index.html#dienstleistungen">KI-Lösungen einführen</a></li>
+                        <li><a href="index.html#dienstleistungen">Schulungen &amp; Befähigung</a></li>
+                        <li><a href="index.html#dienstleistungen">Governance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="impressum.html#datenschutz">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIVOAY Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Inline Filter- und Suchlogik -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('useCaseSearch');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.use-case-card');
+            
+            let activeFilter = 'all';
+            let searchQuery = '';
+
+            function updateDirectory() {
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const textContent = card.innerText.toLowerCase();
+                    
+                    const matchesFilter = (activeFilter === 'all' || category === activeFilter);
+                    const matchesSearch = textContent.includes(searchQuery);
+
+                    if (matchesFilter && matchesSearch) {
+                        card.style.display = 'flex';
+                        // Trigger fade in animation by re-adding a class or style
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    } else {
+                        card.style.display = 'none';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px)';
+                    }
+                });
+            }
+
+            // Search input handler
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase();
+                updateDirectory();
+            });
+
+            // Filter button handler
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeFilter = btn.getAttribute('data-filter');
+                    updateDirectory();
+                });
+            });
+
+            // Handle anchors in URL (e.g. #hr or #sales)
+            const handleHash = () => {
+                const hash = window.location.hash.substring(1);
+                if (hash) {
+                    const targetBtn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+                    if (targetBtn) {
+                        targetBtn.click();
+                    } else {
+                        // If it points to a specific card, let's filter by its category first
+                        const targetCard = document.getElementById(hash);
+                        if (targetCard) {
+                            const cat = targetCard.getAttribute('data-category');
+                            const catBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+                            if (catBtn) catBtn.click();
+                            // Scroll to target card smoothly after filter
+                            setTimeout(() => {
+                                targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                targetCard.style.outline = '2px solid var(--primary)';
+                                targetCard.style.outlineOffset = '4px';
+                                setTimeout(() => targetCard.style.outline = 'none', 3000);
+                            }, 300);
+                        }
+                    }
+                }
+            };
+
+            // Run hash checking initially
+            handleHash();
+            // Listen for hash changes
+            window.addEventListener('hashchange', handleHash);
+        });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>
