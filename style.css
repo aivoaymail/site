@@ -2532,4 +2532,76 @@ ul {
     }
 }
 
+/* Mobile language switcher inside mobile menu list */
+.mobile-lang-item {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--dark-200);
+}
+
+@media (max-width: 768px) {
+    /* Hide desktop nav-right container entirely on mobile to prevent overlapping */
+    .nav-right {
+        display: none !important;
+    }
+
+    .mobile-lang-item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .lang-switcher-mobile {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+    
+    .lang-switcher-mobile .lang-btn {
+        font-size: 1.8rem;
+        line-height: 1;
+        text-decoration: none;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    
+    .lang-switcher-mobile .lang-btn:hover {
+        transform: scale(1.1);
+    }
+
+    /* Subpage Mobile Optimizations */
+    .directory-hero {
+        padding: 100px 0 40px;
+    }
+    
+    .filter-wrapper {
+        padding: 16px;
+        margin-top: -20px;
+        margin-bottom: 24px;
+        gap: 12px;
+    }
+    
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+    
+    .use-case-card {
+        padding: 20px;
+    }
+    
+    .use-case-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .use-case-card .card-summary {
+        margin-bottom: 14px;
+    }
+    
+    .use-case-card .card-details {
+        padding-top: 14px;
+        gap: 8px;
+    }
+}
+
 
